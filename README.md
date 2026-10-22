@@ -124,30 +124,6 @@ python -m invoice_lens.cli audit sample_docs/receipt_cafe.png --export json --ou
 python -m invoice_lens.cli sample
 ```
 
-### Terminal Output Preview:
-```text
-🔍 Auditing document: invoice_discrepancy.png...
-╭───────────────────── InvoiceLens Financial Audit Report ─────────────────────╮
-│ ❌ AUDIT VERDICT: FAILED                                                     │
-│ Vendor: Apex Logistics & Freight | Date: 2026-10-12 | Currency: USD          │
-│ AUDIT FAILED: Found 1 critical financial discrepancy(s). Manual review req.  │
-╰──────────────────────────────────────────────────────────────────────────────╯
-                         Financial Math Reconciliation                          
-┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
-┃ Component      ┃ Printed on Doc ┃ Calculated Invariant ┃  Variance / Status  ┃
-┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
-│ Subtotal       │     USD 340.00 │           USD 340.00 │     Reconciled      │
-│ Tax Amount     │      USD 27.20 │                 8.0% │          —          │
-│ Grand Total    │     USD 382.20 │           USD 367.20 │ MISMATCH: USD 15.00 │
-└────────────────┴────────────────┴──────────────────────┴─────────────────────┘
-                     ⚠️ Flagged Violations & Discrepancies                      
-┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━┓
-┃ Severity ┃ Rule ID        ┃ Field        ┃ Explanation      ┃ Expect ┃ Act  ┃
-┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━┩
-│  ERROR   │ TOTAL_RECONCI… │ total_amount │ Discrepancy: $15 │ 367.20 │ 382. │
-└──────────┴────────────────┴──────────────┴──────────────────┴────────┴━━━━━━┘
-```
-
 ---
 
 ## 🌐 Interactive Streamlit Web Application
