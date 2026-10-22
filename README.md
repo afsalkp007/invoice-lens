@@ -90,7 +90,7 @@ flowchart TD
 
 ### 1. Clone & Set Up Virtual Environment
 ```bash
-git clone https://github.com/<your-username>/invoice-lens.git
+git clone https://github.com/afsalkp007/invoice-lens.git
 cd invoice-lens
 
 # Create and activate virtual environment
@@ -205,15 +205,6 @@ invoice-lens/
     ├── test_models.py
     └── test_reconciler.py
 ```
-
----
-
-## 🔒 Security & Safe-to-Push Checklist
-
-- [x] **Zero Hardcoded Secrets:** API keys are dynamically loaded from environment variables.
-- [x] **`.env` Ignored:** `.env` and `.env.local` strictly excluded in `.gitignore`.
-- [x] **Safe Offline Default:** Runs out-of-the-box in mock mode without requiring an active API key.
-- [x] **Deterministic Guardrails:** Financial calculations cannot be manipulated by prompt injections.
 
 ---
 
